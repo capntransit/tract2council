@@ -1,7 +1,7 @@
 # tract2council
 This script creates a mapping between US census tracts and political districts.
 
-It takes as input two GeoJSON files representing census tracts and political districts, such as [those produced by New York's City Planning Department](http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page) and uses [Shapely](http://toblerity.org/shapely/manual.html) to find which districts contain or intersect with each tract.
+It takes as input two GeoJSON files representing census tracts and political districts, such as [those produced by New York's City Planning Department](http://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page), and uses [Shapely](http://toblerity.org/shapely/manual.html) to find which districts contain or intersect with each tract.
 
 The output is a JSON file containing an object of census tracts.  Each pair in the object consists of the census tract's "BoroCT" number (see below) and an object containing each district that intersects with it.  In that object, each pair consists of the district number and the fraction of the tract (by area) that it intersects.
 
